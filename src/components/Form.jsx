@@ -1,5 +1,6 @@
 import {useState} from "react"
 
+
 const Form = (props)=>{
     const [formState, setFormState] = useState ({search: "",})
     const handleChange = (event)=>{
@@ -18,6 +19,8 @@ const Form = (props)=>{
         })
     }
     return (
+        <div>
+
         <div className="form">
             <h1>Giphy</h1>
             <form onSubmit={handleSubmit}>
@@ -25,9 +28,9 @@ const Form = (props)=>{
                 <input type="submit" value="Search"/>
             </form>
         </div>
+    </div>
     )
 }
 
 export default Form
 
-//<input type="text" name="search" onChange={handleChange} value={formState.search}/>
